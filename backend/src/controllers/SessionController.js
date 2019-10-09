@@ -27,7 +27,11 @@ module.exports = {
    * @method show
    * Listar uma unica sessão 
    */
-  show(){},
+  async show(req,res){
+    const { user_id } = req.headers;
+    let user = await User.findById(user_id);    
+    return res.json(user);
+  },
 
   /**
    * @method store

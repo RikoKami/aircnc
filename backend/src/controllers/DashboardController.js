@@ -1,5 +1,8 @@
 const Spot = require("../models/Spot");
 
+/**
+ * Perfil do usuário
+ */
 module.exports = {
   async show(res,req) {
     const { user_id } = req.headers;
